@@ -1,22 +1,23 @@
 # BASE
 FROM alpine
-# RUN
+# RUN to install nginx with hello world messege
 RUN apk add nginx; \
-    #mkdir /run/nginx/; \
-    echo "<h1>Hello world!</h1>" > /var/www/localhost/htdocs/index.html;
+    echo "<h1>Hello world!</h1>" > /var/www/localhost/htdocs/index.html; \
+    # Install openssl
+    apk add openssl; \
+    # Generate keys and certs
+    openssl req -x509 -nodes -days 365 -subj "/C=CA/ST=QC/O=Company, Inc./CN=mydomain.com" -addext "subjectAltName=DNS:mydomain.com" -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt;
 # CONFIGUTATIONS
 # nginx configuration
 ADD $PWD/app/config/default.conf /etc/nginx/http.d/default.conf
-# keys and certs
-ADD $PWD/app/config/*.key /etc/ssl/private/
-ADD $PWD/app/config/*.crt /etc/ssl/certs/
+# Change Working directory
 WORKDIR /var/www/localhost/htdocs
 # ENTRYPOINT
 COPY $PWD/app/config/entrypoint.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/usr/local/bin/entrypoint.sh"]
 # EXPOSE PORTS
-EXPOSE 80
+#EXPOSE 80
 EXPOSE 443
 # RUN COMMAND
 CMD ["/bin/sh", "-c", "nginx -g 'daemon off;'; nginx -s reload;"]
