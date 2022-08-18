@@ -9,11 +9,7 @@
 1.terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.1/linux_amd64/terraform-provider-tls_v4.0.1_x5
 1.terraform/.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.1/windows_386/terraform-provider-tls_v4.0.1_x5.exe
 1.terraform/ssh_privatekey.pem
-1.terraform/ssh_privatekey.ppk
 1.terraform/terraform.tfstate
 1.terraform/terraform.tfstate.backup
-1.terraform/tf template.zip
-2.docker/from vm/nginx/app/config/nginx-selfsigned.crt
-2.docker/from vm/nginx/app/config/nginx-selfsigned.key
 azure task.txt
 Technical Challenge - devops - remote\[35\].docx
