@@ -37,3 +37,8 @@ variable "linux_virtual_machine_name" {
   type        = string
   description = "Linux VM name in Azure"
 }
+
+variable "allowed_ip_address" {
+  type        = string
+  description = "Allowed IP adress for accessing VM using SSH and HTTPS"
+}

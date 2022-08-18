@@ -53,7 +53,7 @@ resource "azurerm_network_security_group" "nsg" {
       name                                       = "SSH and Nginx"
       priority                                   = 1001
       protocol                                   = "Tcp"
-      source_address_prefix                      = "89.138.82.181"
+      source_address_prefix                      = var.allowed_ip_address
       source_port_range                          = "*"
     }
   
