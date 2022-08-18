@@ -48,7 +48,7 @@ resource "azurerm_network_security_group" "nsg" {
   security_rule {
       access                                     = "Allow"
       destination_address_prefix                 = "*"
-      destination_port_ranges                    = ["22","8080","443","80"]
+      destination_port_ranges                    = ["22","443"]
       direction                                  = "Inbound"
       name                                       = "SSH and Nginx"
       priority                                   = 1001
