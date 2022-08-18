@@ -1,10 +1,33 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>Docker Nginx</title>
+
+        <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        </script>
+
+        <script>
+                $.getJSON("https://api.ipify.org?format=json",
+                                                                                function(data) {
+                        $("#userip").html(data.ip);
+                })
+                const weatherapi = async () => {
+                  const response = await fetch('https://openweathermap.org/data/2.5/find?q=tel%20aviv&appid=439d4b804bc8187953eb36d2a8c26a02&units=metric');
+                  const myJson = await response.json();
+                    console.log(myJson.list[1].main.temp);
+                    document.getElementById("weather").innerText=(myJson.list[1].main.temp-273.15).toFixed(1);
+                  }
+                  weatherapi();
+
+        </script>
 </head>
+
 <body>
-  <h2>Hello from Nginx container</h2>
+        <center>
+                <h2>Hello <label id="userip"></label> and welcome to Israel</h2>
+                <h3>The weather today in TLV is <label id="weather"></label> C”</h3>
+        </center>
 </body>
+
 </html>
