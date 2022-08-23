@@ -21,7 +21,7 @@ Using Terraform, Create a template file that will launch a new environment in Az
 
 
 ### Step 2
-Using Docker, run 1 or more containers that do the following:
+Using Docker, run 1 or more containers that do the following:  
 a.	Use NGINX for reversed proxy  
 b.	Serve a web page that greets: 
     “Hello <Client IP> and welcome to Silverfort. The weather today in TLV is <Celsius> C”  
