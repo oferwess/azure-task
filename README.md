@@ -5,14 +5,14 @@ Using Terraform, Create a template file that will launch a new environment in Az
     •	The VM should have a DYNAMIC public IP - Make sure only your current outgoing IP address is allowed access to the VM via ‘Network security group’ (check your public ip by searching ‘what is my ip’)
     •	Create the following VM and install Docker
     					
-    | Type | Value |
-    | --- | --- |
-    | OS | Linux |
-    | Application | Docker |
-    | CPU | 2 cores |
-    | Memory | 4 GB |
-    | Type | BS Series |
-    | SSH | Private Key |
+| Type | Value |
+| --- | --- |
+| OS | Linux |
+| Application | Docker |
+| CPU | 2 cores |
+| Memory | 4 GB |
+| Type | BS Series |
+| SSH | Private Key |
 
 
 | Command | Description |
