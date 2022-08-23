@@ -26,3 +26,10 @@ a.	Use NGINX for reversed proxy
 b.	Serve a web page that greets: 
     “Hello <Client IP> and welcome to Silverfort. The weather today in TLV is <Celsius> C”  
 c.	Serve the webpage using HTTPs (self-signed cert is ok)  
+
+## How to run solution (requires GIT, Terraform, AzureCLI and credentioanls exported as ENVs)  
+    git clone https://github.com/oferwess/azure-task.git  
+    Insert your public IP address and resources names in tfvars file  
+    cd azure-task/1.terraform/  
+    terraform init  
+    terraform apply -auto-approve  
