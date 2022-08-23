@@ -2,7 +2,7 @@
 
 ### Step 1
 Using Terraform, Create a template file that will launch a new environment in Azure, according to details below:
-⋅⋅⋅ * Create a V-Net  and subnet to host the VM
+⋅⋅⋅Create a V-Net  and subnet to host the VM
 ⋅⋅*	The VM should have a DYNAMIC public IP - Make sure only your current outgoing IP address is allowed access to the VM via ‘Network security group’ (check your public ip by searching ‘what is my ip’)
 ⋅⋅*	Create the following VM and install Docker
     					
