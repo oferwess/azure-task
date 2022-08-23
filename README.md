@@ -15,14 +15,14 @@ Using Terraform, Create a template file that will launch a new environment in Az
 | Type | BS Series |
 | SSH | Private Key |
 
-⋅⋅*	You can only create compute and network resources, to avoid errors, please use this env variable:
-export ARM_SKIP_PROVIDER_REGISTRATION=true
-⋅⋅*	For login, use the command: az login
+*	You can only create compute and network resources, to avoid errors, please use this env variable:
+    export ARM_SKIP_PROVIDER_REGISTRATION=true  
+*	For login, use the command: az login  
 
 
 ### Step 2
-1.	Using Docker, run 1 or more containers that do the following:
-a.	Use NGINX for reversed proxy
+Using Docker, run 1 or more containers that do the following:
+a.	Use NGINX for reversed proxy  
 b.	Serve a web page that greets: 
-“Hello <Client IP> and welcome to Silverfort. The weather today in TLV is <Celsius> C”
-c.	Serve the webpage using HTTPs (self-signed cert is ok)
+    “Hello <Client IP> and welcome to Silverfort. The weather today in TLV is <Celsius> C”  
+c.	Serve the webpage using HTTPs (self-signed cert is ok)  
