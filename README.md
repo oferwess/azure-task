@@ -6,7 +6,7 @@ Using Terraform, Create a template file that will launch a new environment in Az
     •	Create the following VM and install Docker
     					
     | Type | Value |
-    | ------------- | ------------- |
+    | --- | --- |
     | OS            | Linux         |
     | Application   | Docker        |
     | CPU           | 2 cores       |
