@@ -15,6 +15,12 @@ Using Terraform, Create a template file that will launch a new environment in Az
     | SSH           | Private Key   |
 
 
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
+
 •	You can only create compute and network resources, to avoid errors, please use this env variable:
 export ARM_SKIP_PROVIDER_REGISTRATION=true
 •	For login, use the command: az login
