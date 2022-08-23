@@ -7,12 +7,12 @@ Using Terraform, Create a template file that will launch a new environment in Az
     					
     | Type | Value |
     | --- | --- |
-    | OS            | Linux         |
-    | Application   | Docker        |
-    | CPU           | 2 cores       |
-    | Memory        | 4 GB          |
-    | Type          | BS Series     |
-    | SSH           | Private Key   |
+    | OS | Linux |
+    | Application | Docker |
+    | CPU | 2 cores |
+    | Memory | 4 GB |
+    | Type | BS Series |
+    | SSH | Private Key |
 
 
 | Command | Description |
